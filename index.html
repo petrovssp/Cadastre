@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using OpenLayers with Vite</title>
+  </head>
+  <body>
+    <div class="grid-container">
+
+        <div class="header">
+          <img src="/images/Capture.PNG" alt="" style="width: 60px; height: 60px; vertical-align: middle;">
+          <span style="vertical-align: middle;">Кадастрална карта на град Трън, изготвил: Стефан Петров</span>
+        </div>
+        
+        <div class="left">
+
+          <div class="basemaps">
+
+              <h3 class="title">Базови карти</h3>
+
+              <input type="radio" id="OSM" name="basepayerbutton" value="OSM" checked>
+              <lable for="OSM">Open Street Map</lable>
+              <br>
+              <br>
+              <input type="radio" id="googleSat" name="basepayerbutton" value="googleSat">
+              <label for="googleSat">Google Satellite</lable>
+              <br>
+          </div>
+
+        <div class="mymaps">
+
+          <h3 class="title">Потребителски слоеве</h3>
+
+          <input type="checkbox" id="0" name="Immovable" value="Immovable" checked>
+          <label for="Immovable">Поземлени имоти <button id="download0">Изтегли в geoJson</button></label>
+          <br>
+          <br>
+          <input type="checkbox" id="1" name="Buildings" value="Buildings" checked>
+          <label for="Building">Сгради <button id="download1">Изтегли в geoJson</button></label>
+          <br>
+        </div>
+
+            <div id="layerChoice">              
+            </div>
+
+            <div id="info">
+            </div>
+
+
+
+
+        </div>
+
+        <div class="right">
+           <div id="map"></div>
+           <form>
+            <select id="Myprojection">
+              <option value="EPSG:7801" selected>BGS2005 CCS</option>
+              <option value="EPSG:7800">BGS2005 UTM35</option>
+            </select>
+           </form>
+
+        </div>
+
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
+
