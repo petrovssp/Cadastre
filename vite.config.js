@@ -1,5 +1,5 @@
 export default {
-  base: '/Cadastre/',
+  base: '/',
   build: {
     sourcemap: true,
   },
