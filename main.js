@@ -72,8 +72,8 @@ for(let baseLayerElement of baseLayerElements){
 
 const Immovable = new TileLayer({
   source: new TileWMS({
-  url: 'http://localhost:8080/geoserver/Cadastre_Tran/wms',
-  params:{'VERSION':'1.1.0', tiled: true, 'LAYERS':'Cadastre_Tran:immovable'},
+  url: 'https://geoserver.ssp-bg.com/geoserver/Cadastre/wms',
+  params:{'VERSION':'1.1.0', tiled: true, 'LAYERS':'Cadastre:immovable'},
   serverType: 'geoserver',
   visible: true
   })
@@ -81,8 +81,8 @@ const Immovable = new TileLayer({
 
 const Buildings = new TileLayer({
   source: new TileWMS ({
-  url: 'http://localhost:8080/geoserver/Cadastre_Tran/wms',
-  params:{'VERSION':'1.1.0', tiled: true, 'LAYERS':'Cadastre_Tran:buildings'},
+  url: 'https://geoserver.ssp-bg.com/geoserver/Cadastre/wms',
+  params:{'VERSION':'1.1.0', tiled: true, 'LAYERS':'Cadastre:buildings'},
   serverType: 'geoserver',
   visible: true
   })
@@ -147,9 +147,9 @@ projectionSelect.addEventListener('change', function(event){
 
 document.getElementById('download0').addEventListener('click', function () {
 
-  const url = "http://localhost:8080/geoserver/Cadastre_Tran/ows" +
+  const url = "https://geoserver.ssp-bg.com/geoserver/Cadastre/ows" +
               "?service=WFS&version=1.0.0&request=GetFeature" + 
-              "&typeName=Cadastre_Tran%3Aimmovable&outputFormat=application%2Fjson";
+              "&typeName=Cadastre%3Aimmovable&outputFormat=application%2Fjson";
 
   fetch(url)
     .then(response => response.blob())
@@ -165,9 +165,9 @@ document.getElementById('download0').addEventListener('click', function () {
 
 document.getElementById('download1').addEventListener('click', function () {
 
-  const url = "http://localhost:8080/geoserver/Cadastre_Tran/ows" +
+  const url = "https://geoserver.ssp-bg.com/geoserver/Cadastre/ows" +
               "?service=WFS&version=1.0.0&request=GetFeature" + 
-              "&typeName=Cadastre_Tran%3Abuildings&outputFormat=application%2Fjson";
+              "&typeName=Cadastre%3Abuildings&outputFormat=application%2Fjson";
 
   fetch(url)
     .then(response => response.blob())
