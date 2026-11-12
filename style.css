@@ -19,19 +19,18 @@ html, body {
 
 .header {
   grid-area: header;
-  border: 5px solid green;
   font-size: 25px;
 }
 
 .left {
   grid-area: left;
   font-family: Arial, Helvetica, sans-serif;
-  border: 5px solid red;
+  
 }
 
 .right {
   grid-area: right;
-  border: 5px solid blue;
+  border: 3px solid black;
 }
 
 .basemaps {
